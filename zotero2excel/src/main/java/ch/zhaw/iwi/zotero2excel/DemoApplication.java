@@ -5,14 +5,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import ch.zhaw.iwi.zotero2excel.models.WebsiteUser;
-import ch.zhaw.iwi.zotero2excel.repositories.UserRepository;
+import ch.zhaw.iwi.zotero2excel.models.Charset;
+import ch.zhaw.iwi.zotero2excel.repositories.CharsetRepository;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
 
 	@Autowired
-	private UserRepository userRepository;
+	private CharsetRepository charsetRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -21,16 +21,16 @@ public class DemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("CommandLineRunner started...");
-		WebsiteUser websiteUser = new WebsiteUser();
+		/* WebsiteUser websiteUser = new WebsiteUser();
 		websiteUser.setName("Test");
 		websiteUser.setEmail("test@test.ch");
 		websiteUser.setId(1);
 
 		userRepository.save(websiteUser);
-		userRepository.flush();
+		userRepository.flush(); */
 
-		for (WebsiteUser user : userRepository.findAll()) {
-			System.out.println(user.getEmail());
+		for (Charset charset : charsetRepository.findAll()) {
+			System.out.println(charset.getCharset());
 		}
 	}
 
