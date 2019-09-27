@@ -2,11 +2,11 @@ package ch.zhaw.iwi.zotero2excel.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import ch.zhaw.iwi.zotero2excel.models.Charset;
+import ch.zhaw.iwi.zotero2excel.models.Charsets;
 
 /**
  * CharsetRepository
  */
-public interface CharsetRepository extends JpaRepository<Charset, Long>{
+public interface CharsetsRepository extends JpaRepository<Charsets, Integer>{
     
 }

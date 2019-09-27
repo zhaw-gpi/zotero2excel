@@ -29,4 +29,9 @@ build/
 
 ### VS Code ###
 .vscode/
-zotero.sqlite
+*.sqlite
+### Telosys ###
+/TelosysTools/downloads/
+/TelosysTools/lib/
+/TelosysTools/stats/
+/TelosysTools/templates/
