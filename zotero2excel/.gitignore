@@ -30,8 +30,12 @@ build/
 ### VS Code ###
 .vscode/
 *.sqlite
+
 ### Telosys ###
 /TelosysTools/downloads/
 /TelosysTools/lib/
 /TelosysTools/stats/
 /TelosysTools/templates/
+
+### Excel ###
+*.xlsx
